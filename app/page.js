@@ -5,9 +5,9 @@ import { Hero } from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { About } from "@/components/About";
 import LoadingPage from "@/components/LoadingPage";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Results from "@/components/Results";
 import React, { useState, useEffect } from "react";
-import Leaderboard from "@/components/leaderboard/page";
+import Leaderboard from "@/components/leaderboard/page";  // Assuming this is a component
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +30,7 @@ export default function Home() {
           <Navbar /> {/* This will only be shown after loading is complete */}
           <Hero />
           <Leaderboard />
+          <Results/>
           <About />
           <Footer />
         </>
@@ -37,3 +38,4 @@ export default function Home() {
     </div>
   );
 }
+
